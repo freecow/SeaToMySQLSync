@@ -1,29 +1,30 @@
 {
   "source": {
-    "table_name": "Customer Insights",
+    "table_name": "客户口径",
     "fields": [
-      "Customer ID",
-      "Customer Name",
-      "Industry Type"
+      "客户编号",
+      "客户名称",
+      "客户性质"
     ],
-    "relation_field": "Customer Name"
+    "relation_field": "客户名称"
   },
   "destination": {
-    "table_name": "customer_data",
-    "relation_field": "customer_name",
+    "table_name": "project_total_contract",
+    "relation_field": "customer_units",
     "fields_mapping": {
-      "Customer ID": "customer_id",
-      "Customer Name": "customer_name",
-      "Industry Type": "industry_type"
+      "客户编号": "customer_code",
+      "客户名称": "customer_units",
+      "客户性质": "customer_type"
+    }
+  },
+  "mappings": {
+    "客户性质": {
+      "政府部门": "0",
+      "事业单位": "10",
+      "国有企业": "20",
+      "民营企业": "30"
     }
   },
   "insert_missing_records": true,
   "sync_deletion": false,
-  "mappings": {
-    "Industry Type": {
-      "Financial": "1",
-      "Technology": "2",
-      "Healthcare": "3"
-    }
-  }
 }
