@@ -1,0 +1,29 @@
+{
+  "source": {
+    "table_name": "Customer Insights",
+    "fields": [
+      "Customer ID",
+      "Customer Name",
+      "Industry Type"
+    ],
+    "relation_field": "Customer Name"
+  },
+  "destination": {
+    "table_name": "customer_data",
+    "relation_field": "customer_name",
+    "fields_mapping": {
+      "Customer ID": "customer_id",
+      "Customer Name": "customer_name",
+      "Industry Type": "industry_type"
+    }
+  },
+  "insert_missing_records": true,
+  "sync_deletion": false,
+  "mappings": {
+    "Industry Type": {
+      "Financial": "1",
+      "Technology": "2",
+      "Healthcare": "3"
+    }
+  }
+}
