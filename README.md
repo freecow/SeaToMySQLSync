@@ -101,7 +101,7 @@ python main.py
 - SeaTable 配置：在 .env 文件中设置您的 SeaTable 服务器 URL 和 API 令牌，API 令牌针对Seatable表格，具体获取方法请参考Seatable官方文档。
 - MySQL 配置：在 .env 文件中定义您的 MySQL 主机、端口、用户、密码和数据库。
 
-```json
+```xml
 # MySQL Database Configuration
 MYSQL_HOST=localhost
 MYSQL_PORT=3306
